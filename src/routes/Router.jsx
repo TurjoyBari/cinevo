@@ -23,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "explore",
         element: <ExploreMovies />,
+        loader: async () => {
+          const res = await fetch("https://api.tvmaze.com/shows");
+          return res.json();
+        },
       },
       {
         path: "about",

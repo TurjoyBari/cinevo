@@ -53,7 +53,7 @@ const FeaturedMovies = ({ movies }) => {
 
           {/* Movies */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {movies.map((movie) => (
+            {movies.slice(0, 8).map((movie) => (
               <MovieCard
                 key={movie.id}
                 movie={movie}
