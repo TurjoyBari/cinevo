@@ -6,7 +6,7 @@ import MovieCard from "../../../components/movie/MovieCard";
 
 const TrendingMovies = ({ movies }) => {
   const trendingMovies = [...movies].reverse();
-  console.log(trendingMovies);
+  // console.log(trendingMovies);
   return (
     <section className="bg-[#31010f] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
