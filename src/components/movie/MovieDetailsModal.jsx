@@ -95,7 +95,7 @@ const MovieDetailsModal = ({ movie, onClose }) => {
               <div className="flex items-center gap-2 rounded-full border border-[#e7e0cb]/10 bg-[#e7e0cb]/5 px-4 py-2 text-sm text-[#e7e0cb]/70">
                 <FiCalendar size={15} />
 
-                {movie.premiered || movie.ended}
+                {movie.premiered.slice(0, 4) || movie.ended}
               </div>
 
               {/* Genre */}
@@ -122,7 +122,11 @@ const MovieDetailsModal = ({ movie, onClose }) => {
               <h3 className="text-lg font-bold text-[#e7e0cb]">Overview</h3>
 
               <p className="mt-3 text-sm leading-7 text-[#e7e0cb]/55">
-                {movie.summary ||
+                {movie.summary
+                  .replace(/<b>/g, "")
+                  .replace(/<\/b>/g, "")
+                  .replace(/<p>/g, "")
+                  .replace(/<\/p>/g, "") ||
                   movie.overview ||
                   "No overview is available for this movie yet."}
               </p>

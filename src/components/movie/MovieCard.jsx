@@ -35,7 +35,7 @@ const MovieCard = ({ movie, onDetailsClick }) => {
         </h3>
 
         <div className="mt-2 flex items-center gap-3 text-xs text-[#e7e0cb]/45">
-          <span>{movie.premiered}</span>
+          <span>{movie.premiered.slice(0, 4)}</span>
 
           <span className="h-1 w-1 rounded-full bg-[#e7e0cb]/30" />
 
