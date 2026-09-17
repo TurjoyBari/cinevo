@@ -19,7 +19,7 @@ const Home = () => {
 
       <BrowseGenres />
 
-      <TrendingMovies />
+      <TrendingMovies movies={movies} />
 
       <WhyCinevo />
 

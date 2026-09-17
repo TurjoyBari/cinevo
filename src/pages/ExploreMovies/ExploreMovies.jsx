@@ -8,7 +8,7 @@ import { useLoaderData } from "react-router-dom";
 
 const ExploreMovies = () => {
   const allMovies = useLoaderData();
-  console.log(allMovies);
+  // console.log(allMovies);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("All");

@@ -2,11 +2,11 @@ import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 import MovieCard from "../../../components/movie/MovieCard";
-import { featuredMovies } from "../../../data/homeMovies";
+// import { featuredMovies } from "../../../data/homeMovies";
 
-const TrendingMovies = () => {
-  const trendingMovies = [...featuredMovies].reverse();
-
+const TrendingMovies = ({ movies }) => {
+  const trendingMovies = [...movies].reverse();
+  console.log(trendingMovies);
   return (
     <section className="bg-[#31010f] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -38,7 +38,7 @@ const TrendingMovies = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {trendingMovies.map((movie) => (
+          {trendingMovies.slice(0, 4).map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
